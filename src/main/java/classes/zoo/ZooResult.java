@@ -26,5 +26,4 @@ public class ZooResult {
     public void setSizeAnimals(int sizeAnimals) {
         this.sizeAnimals = sizeAnimals;
     }
-
 }

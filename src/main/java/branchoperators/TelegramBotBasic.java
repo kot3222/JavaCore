@@ -7,10 +7,10 @@ import java.io.InputStreamReader;
 public class TelegramBotBasic {
     public static void main(String[] args) throws IOException {
 
-        // Данный код мы вообще никак не трогаем. Просто смотрим и любуемся им.
         var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
             int number = 0;
+
             try {
                 number = Integer.parseInt(bufferedReader.readLine());
             } catch (Exception e) {
@@ -18,27 +18,18 @@ public class TelegramBotBasic {
                 bufferedReader.close();
                 break;
             }
-        if(number==1){
-            System.out.println("Hello");
+            if (number == 1) {
+                System.out.println("Hello");
+            } else if (number == 2) {
+                System.out.println("Buy");
+            } else if (number == 3) {
+                System.out.println("Whaaat??");
+            } else {
+                System.out.println("I don't understand you, I'm turning off");
+                bufferedReader.close();
+                break;
+            }
         }
-        else if (number==2) {
-            System.out.println("Buy");
-        }
-        else if(number==3)
-        {
-            System.out.println("Whaaat??");
-        }
-        else
-        {
-            System.out.println("I don't understand you, I'm turning off");
-            bufferedReader.close();
-            break;
-        }
-
-
-
-
     }
-}
 }
 
