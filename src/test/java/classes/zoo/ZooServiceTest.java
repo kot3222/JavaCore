@@ -6,7 +6,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ZooServiceTest {
-
     @Test
     public void getAveragePriceByZoos() {
         Zoo kazanZoo = new Zoo(
@@ -31,7 +30,7 @@ public class ZooServiceTest {
                 }
         );
 
-        Zoo prahaZoo=new Zoo(
+        Zoo prahaZoo = new Zoo(
                 1750,
                 "PrahaZoo",
                 new Animal[]{
@@ -42,13 +41,13 @@ public class ZooServiceTest {
                 }
         );
 
-        Zoo[] zoos={kazanZoo,moscowZoo,prahaZoo};
+        Zoo[] zoos = {kazanZoo, moscowZoo, prahaZoo};
 
-        ZooService zooService=new ZooService();
+        ZooService zooService = new ZooService();
 
-        long result=zooService.getAveragePriceByZoos(zoos);
+        long result = zooService.getAveragePriceByZoos(zoos);
         // 1750+2650+1250=5650/3=1883,33
-        Assert.assertEquals(1883,result);
+        Assert.assertEquals(1883, result);
     }
 
     @Test
@@ -92,13 +91,14 @@ public class ZooServiceTest {
         ZooService zooService = new ZooService();
         ZooResult result = zooService.getNameByThrBiggestZoos(zoos);
         String expectedName = "MoscowZoo";
-        int expectedAnimalsSize=5;
+
+        int expectedAnimalsSize = 5;
+
         System.out.println(result.getName());
         System.out.println(result.getSizeAnimals());
         Assert.assertEquals(expectedName, result.getName());
         Assert.assertEquals(expectedAnimalsSize, result.getSizeAnimals());
     }
-
 }
 
 
