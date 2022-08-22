@@ -6,22 +6,21 @@ public class AutoService {
      * @param autos все автомобили
      * @return массив автомобилей БМВ.
      */
-    public Auto[] getOnlyModelName(Auto[] autos,String model) {
+    public Auto[] getOnlyModelName(Auto[] autos, String model) {
 
-        int count=0;
-
-        for(Auto auto:autos){
-            if(auto.getModel().equals(model)){
+        int count = 0;
+        for (Auto auto : autos) {
+            if (auto.getModel().equals(model)) {
                 count++;
             }
         }
 
-        Auto[] result=new Auto[count];
+        Auto[] result = new Auto[count];
 
-        for(Auto auto:autos){
-            if(auto.getModel().equals(model)){
+        for (Auto auto : autos) {
+            if (auto.getModel().equals(model)) {
                 count--;
-                result[count]=auto;
+                result[count] = auto;
             }
         }
         return result;
@@ -33,21 +32,20 @@ public class AutoService {
      * @param autos все автомобили
      * @return автомобили спорт-класса
      */
-    public Auto[] getSportCars(Auto[] autos,int seatsCount) {
-        int count=0;
-
-        for(Auto auto:autos){
-            if(auto.getSeatsCount()==2){
+    public Auto[] getSportCars(Auto[] autos, int seatsCount) {
+        int count = 0;
+        for (Auto auto : autos) {
+            if (auto.getSeatsCount() == 2) {
                 count++;
             }
         }
 
-        Auto[] result=new Auto[count];
+        Auto[] result = new Auto[count];
 
-        for(Auto auto:autos){
-            if(auto.getSeatsCount()==2){
+        for (Auto auto : autos) {
+            if (auto.getSeatsCount() == 2) {
                 count--;
-                result[count]=auto;
+                result[count] = auto;
             }
         }
         return result;
@@ -58,21 +56,21 @@ public class AutoService {
      * @param autos все автомобили
      * @return автомобили с автоматической коробкой передач.
      */
-    public Auto[] getOnlyAutomaticTypeCars(Auto[] autos,String transmission) {
-        int count=0;
+    public Auto[] getOnlyAutomaticTypeCars(Auto[] autos, String transmission) {
+        int count = 0;
 
-        for(Auto auto:autos){
-            if(auto.getTransmission().equals(transmission)){
+        for (Auto auto : autos) {
+            if (auto.getTransmission().equals(transmission)) {
                 count++;
             }
         }
 
-        Auto[] result=new Auto[count];
+        Auto[] result = new Auto[count];
 
-        for(Auto auto:autos){
-            if(auto.getTransmission().equals(transmission)){
+        for (Auto auto : autos) {
+            if (auto.getTransmission().equals(transmission)) {
                 count--;
-                result[count]=auto;
+                result[count] = auto;
             }
         }
         return result;
@@ -84,24 +82,23 @@ public class AutoService {
      * @return автомобили Mercedes Е-класса
      */
 
-    public  Auto[] getOnlyMercedesEClassCars(Auto[] autos,String model) {
-        int count=0;
+    public Auto[] getOnlyMercedesEClassCars(Auto[] autos, String model) {
+        int count = 0;
 
-        for(Auto auto:autos){
-            if(auto.getModel().equals(model)&& auto.getMark().contains("E")){
+        for (Auto auto : autos) {
+            if (auto.getModel().equals(model) && auto.getMark().contains("E")) {
                 count++;
             }
         }
 
-        Auto[] result=new Auto[count];
+        Auto[] result = new Auto[count];
 
-        for(Auto auto:autos){
-            if(auto.getModel().equals(model)&& auto.getMark().contains("E")){
+        for (Auto auto : autos) {
+            if (auto.getModel().equals(model) && auto.getMark().contains("E")) {
                 count--;
-                result[count]=auto;
+                result[count] = auto;
             }
         }
         return result;
     }
-
 }

@@ -1,13 +1,9 @@
 package classes.auto;
 
 public class Auto {
-
     private String model;
-
     private String mark;
-
     private int seatsCount;
-
     private String transmission;
 
     public Auto(String model, String mark, int seatsCount, String transmission) {

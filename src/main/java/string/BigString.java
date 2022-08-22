@@ -3,7 +3,6 @@ package string;
 public class BigString {
 
     private int length;
-
     private String value;
 
     public BigString(int length, String value) {
